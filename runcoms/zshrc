@@ -3,8 +3,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 # setting workon home and virtualenvwrapper
-export WORKON_HOME=~/envs
-source /usr/local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=~/envs
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+alias mkvirtualenv2='mkvirtualenv -p /usr/bin/python2'
+source /usr/bin/virtualenvwrapper.sh
 
 
 #teamocil autocompletion
@@ -12,3 +15,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 source $HOME/.zshrc.local
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+
+
+
+bindkey '^R' history-incremental-search-backward
