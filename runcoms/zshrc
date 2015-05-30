@@ -5,7 +5,9 @@ fi
 # setting workon home and virtualenvwrapper
 # export WORKON_HOME=~/envs
 
+export TMPDIR=/tmp
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+# purposely use the the binary as to not confuse paths at all
 alias mkvirtualenv2='mkvirtualenv -p /usr/bin/python2'
 source /usr/bin/virtualenvwrapper.sh
 
